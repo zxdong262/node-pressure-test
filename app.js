@@ -79,7 +79,7 @@ function start() {
 
 
 function qr(args) {
-	return function(args) {
+	return function() {
 		var def = q.defer()
 		,t1 = new Date().getTime()
 		,t2 = 0
