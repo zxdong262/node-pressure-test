@@ -37,7 +37,7 @@ function start() {
 	,i = 0
 
 	for(;i < concurrent;i ++) {
-		qr(opts.options)()
+		qr(opts.options)
 		.done(function(data) {
 
 			var response =  data.response
@@ -79,7 +79,7 @@ function start() {
 
 
 function qr(args) {
-	return function() {
+	return (function() {
 		var def = q.defer()
 		,t1 = new Date().getTime()
 		,t2 = 0
@@ -100,5 +100,5 @@ function qr(args) {
 		})
 
 		return def.promise
-	}
+	})()
 }
