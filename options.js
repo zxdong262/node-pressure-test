@@ -5,7 +5,7 @@ module.exports = {
     // visit https://www.npmjs.org/package/request#request-options-callback-
 
     options: {
-        url: 'http://clm.qida.comd'
+        url: 'http://baidu.com'
     }
 
     //concurrent request number
