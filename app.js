@@ -5,7 +5,6 @@
 
 var
 q = require('q')
-,_ = require('lodash')
 ,request = require('request')
 ,opts = require('./options')
 ,concurrent = opts.concurrent
