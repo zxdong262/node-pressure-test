@@ -37,7 +37,7 @@ function start() {
 	,i = 0
 
 	for(;i < concurrent;i ++) {
-		qr(opts.options)
+		qr(opts.options)()
 		.done(function(data) {
 
 			var response =  data.response
@@ -79,25 +79,26 @@ function start() {
 
 
 function qr(args) {
+	return function(args) {
+		var def = q.defer()
+		,t1 = new Date().getTime()
+		,t2 = 0
 
-	var def = q.defer()
-	,t1 = new Date().getTime()
-	,t2 = 0
-
-	request(args, function(error, response, body) {
-		t2 = new Date().getTime()
-		if(error) def.reject({
-			error: error
-			,t1: t1
-			,t2: t2
+		request(args, function(error, response, body) {
+			t2 = new Date().getTime()
+			if(error) def.reject({
+				error: error
+				,t1: t1
+				,t2: t2
+			})
+			else def.resolve({
+				body: body
+				,response: response
+				,t1: t1
+				,t2: t2
+			})
 		})
-		else def.resolve({
-			body: body
-			,response: response
-			,t1: t1
-			,t2: t2
-		})
-	})
 
-	return def.promise
+		return def.promise
+	}
 }
