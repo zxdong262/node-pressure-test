@@ -7,7 +7,7 @@ a simple nodejs pressure test app
 1. get it ready
 
 ```Batchfile
-git clone git@github.com:zxdong262/node-pressure-test.git
+git clone https://github.com/zxdong262/node-pressure-test.git
 cd node-pressure-test
 cp options-sample.js options.js
 sudo npm install
