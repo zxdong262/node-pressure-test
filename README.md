@@ -9,6 +9,7 @@ a simple nodejs pressure test app
 ```Batchfile
 git clone git@github.com:zxdong262/node-pressure-test.git
 cd node-pressure-test
+cp options-sample.js options.js
 sudo npm install
 ```
 
@@ -23,6 +24,7 @@ module.exports = {
 
     options: {
         url: 'http://www.baidu.com'
+        ,timeout: 600000
     }
 
     //concurrent request number
