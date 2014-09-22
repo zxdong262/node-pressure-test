@@ -6,10 +6,11 @@ module.exports = {
 
     options: {
         url: 'http://baidu.com'
+        ,timeout: 6000000
     }
 
     //concurrent request number
-    ,concurrent: 150
+    ,concurrent: 1500
     ,logType: 'min'
     
 }
