@@ -13,7 +13,7 @@ cp options-sample.js options.js
 sudo npm install
 ```
 
-now edit options.js
+now just edit options.js
 
 ```javascript
 module.exports = {
