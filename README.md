@@ -4,7 +4,7 @@ a simple nodejs pressure test app
 
 ## how to use
 
-1. get it ready
+get it ready
 
 ```Batchfile
 git clone https://github.com/zxdong262/node-pressure-test.git
@@ -13,7 +13,7 @@ cp options-sample.js options.js
 sudo npm install
 ```
 
-2. edit options.js
+edit options.js
 
 ```javascript
 module.exports = {
@@ -33,7 +33,7 @@ module.exports = {
 }
 ```
 
-3. run it
+run it
 
 ```Batchfile
 node app
